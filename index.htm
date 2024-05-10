@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="namazrem.css">
+    <title>Namaz Reminder</title>
+    <link rel="icon" type="image/jpg" href="https://th.bing.com/th/id/R.cc598412a99c936d641e1657a0ab4b36?rik=L9oMI1F4lEvnsA&riu=http%3a%2f%2fqatarprayertimes.com%2fimages%2fprayer-times-qatar.jpg&ehk=YQ0Wk4qmDxYG9%2bfdv83WUdaegAigTf7vLVLLim9q2Sg%3d&risl=&pid=ImgRaw&r=0">
+</head>
+
+<body>
+    <div class="block">
+    <header>Namaz Reminder</header>
+    <p id="showDate"></p>
+    <p id="showTime"></p>
+    <p class="namaz"> 
+        <input type="time" class="p" id="fajr" value="04:45">
+        <label class="lock-checkbox">
+            <input type="checkbox" onclick="setTime()">
+            <span class="lock-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6z"></path>
+              </svg>
+            </span>
+          </label>
+        &nbsp; <strong>فجر</strong>
+    </p>
+    <p class="namaz">
+        <input type="time" class="p" id="zuhr" value="13:30">
+        <label class="lock-checkbox">
+            <input type="checkbox" onclick="setTime()">
+            <span class="lock-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6z"></path>
+              </svg>
+            </span>
+          </label>
+        &nbsp; <strong>ظہر</strong></p>
+    <p class="namaz"> 
+        <input type="time" class="p" id="asr" value="17:15">
+        <label class="lock-checkbox">
+            <input type="checkbox" onclick="setTime()">
+            <span class="lock-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6z"></path>
+              </svg>
+            </span>
+          </label>
+        &nbsp; <strong>عصر</strong></p>
+    <p class="namaz"> 
+        <input type="time" class="p" id="magrib" value="18:50">
+        <label class="lock-checkbox">
+            <input type="checkbox" onclick="setTime()">
+            <span class="lock-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6z"></path>
+              </svg>
+            </span>
+          </label>
+        &nbsp; <strong>مغرب</strong></p>
+    <p class="namaz"> 
+        <input type="time" class="p" id="isha" value="20:00">
+        <label class="lock-checkbox">
+            <input type="checkbox" onclick="setTime()">
+            <span class="lock-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6z"></path>
+              </svg>
+            </span>
+          </label>
+        &nbsp; <strong>عشا</strong></p>
+    <p class="namaz"> 
+        <input type="time" class="p" id="jumma" value="14:00">
+        <label class="lock-checkbox">
+            <input type="checkbox" onclick="setTime()">
+            <span class="lock-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6z"></path>
+              </svg>
+            </span>
+          </label>
+        &nbsp; <strong>جمعہ</strong></p>
+    <p id="countDown"></p>
+    </div>
+    <script src="namazrem.js"></script>
+</body>
+
+</html>
