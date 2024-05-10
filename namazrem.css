@@ -85,6 +85,9 @@ strong{
     font-size: 14px;
   }
   .block{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
     width: 400px;
   }
   .lock-icon {
