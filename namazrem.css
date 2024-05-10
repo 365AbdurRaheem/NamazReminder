@@ -102,7 +102,8 @@ strong{
     left: 15px;
   }
   .p{
-    border: none;
+    width:80px;
+    backgroundColor:none;
     height: 20px;
     padding-left: 20px;
     margin: 0;
@@ -111,7 +112,7 @@ strong{
   }
   .namaz{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
   }
   
